@@ -1,7 +1,8 @@
 
 module.exports = {
     target: 'node',
-    // node: {
-    //     fs: 'empty'
-    // },
+    node: {
+        // fs: 'empty',
+        __dirname: false,
+    },
 };

@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 let command = (e, p) => {
-    // console.log(e, '   ', p);
+    console.log(e, '   ', p);
     // shelljs.echo(e, '   ', p);
     //shelljs.exit(1);   执行完就退出
     // shelljs.exec('git pull');
@@ -17,8 +17,9 @@ try {
 } catch (err) {
     console.log('path not exist...');
     console.log('watch current dir');
+    dirPath = __dirname;
 }
-dirPath = __dirname;
-console.log(path.resolve(dirPath))
+// console.log('watch on ', dirPath);
+
 chokidar.watch(path.resolve(dirPath)).on('all', command);
 
