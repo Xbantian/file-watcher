@@ -32,7 +32,7 @@ let config = {
 
 //读取文件配置
 try {
-    let data = fs.readFileSync('./path.config').toString();
+    let data = fs.readFileSync('./watcher.config').toString();
 
     //处理不同系统
     let splitStr = '\n';
